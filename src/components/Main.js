@@ -7,7 +7,6 @@ const Main = () => {
   return (
     <main>
       <Intro></Intro>
-
       <Specials></Specials>
       <Testimonials> </Testimonials>
       <About></About>
