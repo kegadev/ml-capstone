@@ -1,7 +1,16 @@
+import About from "./About";
+import Intro from "./Intro";
+import Specials from "./Specials";
+import Testimonials from "./Testimonials";
+
 const Main = () => {
   return (
     <main>
-      <h1>ReactJS</h1>
+      <Intro></Intro>
+
+      <Specials></Specials>
+      <Testimonials> </Testimonials>
+      <About></About>
     </main>
   );
 };
