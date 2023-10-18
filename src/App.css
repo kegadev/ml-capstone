@@ -3,7 +3,76 @@
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Markazi Text", sans-serif;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
 nav {
   display: flexbox;
   justify-content: space-between;
+}
+
+.intro {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 70px;
+  justify-content: center;
+  /* align-items: center; */
+  height: 350px;
+  background: #495e57;
+}
+
+.intro :first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 300px;
+
+  /* Apply your styles here */
+}
+
+.intro h1 {
+  color: #f4ce14;
+  font-size: 3rem;
+}
+
+.intro img {
+  border-radius: 10px;
+  width: auto;
+  height: min(100%, 450px);
+  object-fit: fill;
+}
+
+.intro p,
+h2 {
+  color: #fff;
+}
+
+.intro p {
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: #f4ce14;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #000;
+  width: 200px;
+  padding: 16px;
+  border-radius: 32px;
+}
+
+.intro button {
+  margin-top: 24px;
 }
