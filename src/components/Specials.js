@@ -1,5 +1,5 @@
 const Specials = () => {
-  <>Specials</>;
+  return <>Specials</>;
 };
 
 export default Specials;
