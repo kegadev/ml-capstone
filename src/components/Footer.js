@@ -6,10 +6,14 @@ const Footer = () => {
       <div className="footer-links">
         <h3>Navigation</h3>
         <ul>
-          <li>Home</li>
+          <li>
+            <a href="/">Home</a>
+          </li>
           <li>About</li>
           <li>Menu</li>
-          <li>Reservations</li>
+          <li>
+            <a href="/booking">Reservations</a>
+          </li>
           <li>Order Online</li>
           <li>Login</li>
         </ul>
