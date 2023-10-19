@@ -50,8 +50,8 @@ nav {
 .intro img {
   border-radius: 10px;
   width: auto;
-  height: min(100%, 450px);
-  object-fit: fill;
+  height: min(100%, 350px);
+  object-fit: scale-down;
 }
 
 .intro p,
@@ -75,4 +75,20 @@ button {
 
 .intro button {
   margin-top: 24px;
+}
+
+.specials {
+  margin: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.specials h2 {
+  font-size: 3rem;
+  color: #000;
+}
+
+.specials .subtitle {
+  display: flex;
+  justify-content: space-evenly;
 }
