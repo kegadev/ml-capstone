@@ -28,8 +28,12 @@ const Footer = () => {
           <a href="https://www.pinterest.com/kevingb20" target="blank">
             <li>Pinterest</li>
           </a>
-          <li>Instagram</li>
-          <li>LinkedIn</li>
+          <a href="https://www.instagram.com/kegadev" target="blank">
+            <li>Instagram</li>
+          </a>
+          <a href="https://www.linkedin.com/kegadev" target="blank">
+            <li>LinkedIn</li>
+          </a>
         </ul>
       </div>
     </footer>
