@@ -1,4 +1,5 @@
 import restaurantFood from "../assets/restaurant_food.jpg";
+import { Link } from "react-router-dom";
 const Intro = () => {
   return (
     <div className="intro">
@@ -9,7 +10,9 @@ const Intro = () => {
           We are a family owned Mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <button>Reserve a Table</button>
+        <button>
+          <Link to="/booking">Reserve a Table</Link>
+        </button>
       </div>
       <img src={restaurantFood} alt="Restaurant food" />
     </div>
