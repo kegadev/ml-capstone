@@ -167,6 +167,7 @@ button {
   background-color: #f4ce14;
   font-size: 1.1em;
   font-weight: 600;
+  /* height: 60px; */
   color: #000;
   width: 200px;
   padding: 16px;
@@ -174,7 +175,16 @@ button {
 }
 
 .intro button {
+  display: flex;
   margin-top: 24px;
+}
+
+.intro .link-button {
+  text-decoration: none;
+  text-align: center;
+  height: 24px;
+  align-items: center;
+  color: #000;
 }
 
 .specials {

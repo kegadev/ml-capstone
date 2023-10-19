@@ -11,7 +11,9 @@ const Intro = () => {
           recipes served with a modern twist.
         </p>
         <button>
-          <Link to="/booking">Reserve a Table</Link>
+          <Link to="/booking" className="link-button">
+            Reserve a Table
+          </Link>
         </button>
       </div>
       <img src={restaurantFood} alt="Restaurant food" />
