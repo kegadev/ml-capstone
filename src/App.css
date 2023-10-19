@@ -12,6 +12,11 @@ h6 {
   font-family: "Markazi Text", sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: "Karla", sans-serif;
 }
@@ -79,8 +84,12 @@ button {
 
 .specials {
   margin: 24px;
-  display: grid;
-  grid-template-columns: 1fr;
+  /* overflow: hidden; */
+
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
+  grid-template-columns: 1fr; */
 }
 
 .specials h2 {
@@ -90,5 +99,58 @@ button {
 
 .specials .subtitle {
   display: flex;
-  justify-content: space-evenly;
+  margin: 36px;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+
+.card-container {
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  /* height: 350px; */
+}
+
+.card {
+  width: 300px;
+  height: 520px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: #ccc 0 0 10px;
+  /* overflow: hidden; */
+}
+
+.card img {
+  width: min(100%, 300px);
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.card-header {
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card-body {
+  padding: 10px;
+  height: 150px;
+}
+
+.card h3 {
+  text-align: center;
+  /* font-size: 18px; */
 }
