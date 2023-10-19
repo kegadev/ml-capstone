@@ -2,10 +2,10 @@ const Card = ({ title, description, image }) => {
   return (
     <div className="card">
       <img src={image} alt={`${title}  image`} />
-      <div class="card-header">
+      <div className="card-header">
         <h2>{title}</h2>
       </div>
-      <div class="card-body">
+      <div className="card-body">
         <p>{description}</p>
       </div>
 
