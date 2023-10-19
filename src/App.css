@@ -269,3 +269,16 @@ hr {
   background-color: #495e57;
   border: none;
 }
+footer {
+  display: flex;
+  margin: 0 32px;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}

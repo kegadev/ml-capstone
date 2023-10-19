@@ -25,7 +25,9 @@ const Footer = () => {
       <div className="footer-links">
         <h3>Social Media</h3>
         <ul>
-          <li>Pinterest</li>
+          <a href="https://www.pinterest.com/kevingb20" target="blank">
+            <li>Pinterest</li>
+          </a>
           <li>Instagram</li>
           <li>LinkedIn</li>
         </ul>
