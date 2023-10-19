@@ -213,3 +213,37 @@ button {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: space-between;
+  gap: 80px;
+}
+
+.about-image-container {
+  position: relative;
+  padding-top: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-image-container img {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 250px;
+  /* height: 100%; */
+  object-fit: cover;
+}
+/* .about img {
+  width: 200px;
+  object-fit: cover;
+} */
+
+.about-image-container img:first-child {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+}
