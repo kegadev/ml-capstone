@@ -202,7 +202,7 @@ button {
   background-color: #fff;
   box-shadow: #cccccc77 0 0 10px;
 }
-.testimonial :first-child {
+.testimonial .testimonial-stars {
   width: 120px;
   object-fit: contain;
 }
