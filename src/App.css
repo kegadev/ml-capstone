@@ -55,8 +55,15 @@ nav {
 .intro img {
   border-radius: 10px;
   width: auto;
+
   height: min(100%, 350px);
   object-fit: scale-down;
+}
+
+@media (max-width: 768px) {
+  .intro img {
+    display: none;
+  }
 }
 
 .intro p,
