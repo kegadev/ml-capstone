@@ -231,6 +231,11 @@ button {
   font-size: x-large;
 }
 
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
 .about-image-container {
   position: relative;
   padding-top: 30px;
@@ -255,4 +260,12 @@ button {
   position: absolute;
   top: 100px;
   left: 150px;
+}
+
+hr {
+  margin: 32px 0;
+  width: 100%;
+  height: 5px;
+  background-color: #495e57;
+  border: none;
 }

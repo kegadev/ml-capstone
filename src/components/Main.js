@@ -10,7 +10,7 @@ const Main = () => {
       <Specials></Specials>
       <Testimonials> </Testimonials>
       <About></About>
-      <div style={{ backgroundColor: "blue", height: "5px" }}></div>
+      <hr />
     </main>
   );
 };
