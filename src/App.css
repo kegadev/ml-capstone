@@ -171,3 +171,13 @@ button {
   text-align: center;
   /* font-size: 18px; */
 }
+
+.testimonials {
+  background-color: #495e57;
+}
+
+.testimonials h2 {
+  color: #f4ce14;
+  margin: 24px;
+  text-align: center;
+}

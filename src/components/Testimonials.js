@@ -2,7 +2,7 @@ import Testimonial from "./Testimonial";
 
 const Testimonials = () => {
   return (
-    <>
+    <div className="testimonials">
       <h2> Testimonials</h2>
       <div className="testimonial-container">
         <Testimonial></Testimonial>
@@ -10,7 +10,7 @@ const Testimonials = () => {
         <Testimonial></Testimonial>
         <Testimonial></Testimonial>
       </div>
-    </>
+    </div>
   );
 };
 
