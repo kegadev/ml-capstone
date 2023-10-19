@@ -29,6 +29,7 @@ const Specials = () => {
     return specials.map((special) => {
       return (
         <Card
+          key={special.title}
           title={special.title}
           description={special.description}
           image={special.image}

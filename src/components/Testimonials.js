@@ -32,6 +32,7 @@ const Testimonials = () => {
     return testimonials.map((testimonial) => {
       return (
         <Testimonial
+          key={testimonial.name}
           name={testimonial.name}
           image={testimonial.image}
           description={testimonial.description}
