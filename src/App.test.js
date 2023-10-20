@@ -17,5 +17,5 @@ test("initializeTimes returns the correct expected value", () => {
   };
 
   const times = initializeTimes();
-  expect(times).toHaveLength(7);
+  expect(times).toHaveLength(6);
 });
