@@ -378,3 +378,14 @@ footer a {
     gap: 24px;
   }
 }
+
+.booking-page {
+  margin: 36px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  gap: 20px;
+}
