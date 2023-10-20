@@ -6,23 +6,28 @@ import Intro from "./Intro";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";
 import Booking from "./Booking";
+import { fetchAPI, submitAPI } from "../api/fakeAPI";
 
-const initializeTimes = () => {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+const initializeTimes = (date) => {
+  let myDate = date;
+
+  if (isNaN(new Date(date))) {
+    // If it's not a valid date, create a new Date object representing the current date and time
+    myDate = new Date();
+  }
+
+  return fetchAPI(myDate);
+  // return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 };
 
-const updateTimes = (state, action) => {
-  // Update available times based on selected date
-  // For now, just return the same available times regardless of the date
-  return initializeTimes();
-};
+function updateTimes(state, date) {
+  return { availableTimes: fetchAPI(new Date(date)) };
+}
 
 const Main = () => {
-  const [availableTimes, dispatch] = useReducer(
-    updateTimes,
-    [],
-    initializeTimes
-  );
+  const initialState = { availableTimes: initializeTimes(new Date()) };
+  const [state, dispatch] = useReducer(updateTimes, initialState);
+
   const [selectedDate, setSelectedDate] = useState("");
   const handleDateChange = (event) => {
     const value = event.target.value;
@@ -49,7 +54,7 @@ const Main = () => {
           path="/booking"
           element={
             <Booking
-              availableTimes={availableTimes}
+              availableTimes={state.availableTimes}
               selectedDate={selectedDate}
               handleDateChange={handleDateChange}
             ></Booking>
