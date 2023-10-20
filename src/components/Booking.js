@@ -1,9 +1,14 @@
 import BookingForm from "./BookingForm";
-const Booking = () => {
+const Booking = (props) => {
   return (
     <div className="booking-page">
       <h1>Booking</h1>
-      <BookingForm></BookingForm>
+      <BookingForm
+        availableTimes={props.availableTimes}
+        selectedDate={props.selectedDate}
+        handleDateChange={props.handleDateChange}
+        dispatch={props.dispatch}
+      ></BookingForm>
     </div>
   );
 };
