@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import BookingForm from "./components/BookingForm";
 
-import { initializeTimes } from "./components/Main";
+import { initializeTimes, updateTimes } from "./components/Main";
 
 test("renders booking heading", () => {
   render(<BookingForm />);
@@ -11,11 +11,11 @@ test("renders booking heading", () => {
 });
 
 test("initializeTimes returns the correct expected value", () => {
-  const initialState = {
-    availableTimes: [],
-    selectedTime: "",
-  };
-
   const times = initializeTimes();
+  expect(times).toHaveLength(6);
+});
+
+test("updateTimes returns the correct expected value", () => {
+  const times = updateTimes();
   expect(times).toHaveLength(6);
 });
