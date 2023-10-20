@@ -10,6 +10,12 @@ test("renders booking heading", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test("check submit is available in form", () => {
+  render(<BookingForm />);
+  const submitElement = screen.getByText(/Make Your reservation/);
+  expect(submitElement).toBeInTheDocument();
+});
+
 test("initializeTimes returns the correct expected value", () => {
   const times = initializeTimes();
   expect(times).toHaveLength(6);
