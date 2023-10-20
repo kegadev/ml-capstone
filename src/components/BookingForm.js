@@ -34,7 +34,7 @@ const BookingForm = (props) => {
       />
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time" value={time} onChange={handleTimeChange}>
-        {props.availableTimes.map((time) => (
+        {props.availableTimes?.map((time) => (
           <option key={time}>{time}</option>
         ))}
       </select>
