@@ -1,6 +1,28 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
+export const yupObject = Yup.object({
+  date: Yup.date().required("Date is required"),
+  time: Yup.string().required("Time is required"),
+  guests: Yup.number()
+    .min(1, "Must be at least 1")
+    .max(10, "Must be 10 or less")
+    .required("Number of guests is required"),
+  occasion: Yup.string().required("Occasion is required"),
+});
+
+export const onSubmit = (formValues, action) => {
+  const formData = {
+    date: formValues.date,
+    time: formValues.time,
+    guests: formValues.guests,
+    occasion: formValues.occasion,
+  };
+
+  console.log("formData", formData);
+  action(formData);
+};
+
 const BookingForm = (props) => {
   const handleDateChange = (event) => {
     props.handleDateChange(event);
@@ -13,26 +35,9 @@ const BookingForm = (props) => {
       guests: "1",
       occasion: "Birthday",
     },
-    validationSchema: Yup.object({
-      date: Yup.date().required("Date is required"),
-      time: Yup.string().required("Time is required"),
-      guests: Yup.number()
-        .min(1, "Must be at least 1")
-        .max(10, "Must be 10 or less")
-        .required("Number of guests is required"),
-      occasion: Yup.string().required("Occasion is required"),
-    }),
 
-    onSubmit: () => {
-      const formData = {
-        date: formik.values.date,
-        time: formik.values.time,
-        guests: formik.values.guests,
-        occasion: formik.values.occasion,
-      };
-      console.log("formData", formData);
-      props.submitForm(formData);
-    },
+    validationSchema: yupObject,
+    onSubmit: () => onSubmit(formik.values, props.submitForm),
   });
 
   return (
@@ -68,6 +73,7 @@ const BookingForm = (props) => {
         {...formik.getFieldProps("guests")}
       />
       <span className="error-message">
+        {/* {formik.errors.guests} */}
         {formik.touched.guests && formik.errors.guests}
       </span>
       <label htmlFor="occasion">Occasion</label>
