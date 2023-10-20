@@ -7,6 +7,7 @@ import Specials from "./Specials";
 import Testimonials from "./Testimonials";
 import Booking from "./Booking";
 import { fetchAPI, submitAPI } from "../api/fakeAPI";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 const initializeTimes = (date) => {
   let myDate = date;
@@ -60,6 +61,7 @@ const Main = () => {
             ></Booking>
           }
         ></Route>
+        <Route path="/bookingConfirmed" element={<ConfirmedBooking />}></Route>
       </Routes>
       <hr />
     </main>
