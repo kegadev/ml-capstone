@@ -9,7 +9,7 @@ const BookingForm = (props) => {
   const formik = useFormik({
     initialValues: {
       date: props.selectedDate,
-      time: props.availableTimes[0],
+      time: "",
       guests: "1",
       occasion: "Birthday",
     },
