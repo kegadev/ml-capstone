@@ -23,6 +23,17 @@ const BookingForm = (props) => {
     setOccasion(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = {
+      date: props.selectedDate,
+      time: time,
+      guests: guests,
+      occasion: occasion,
+    };
+    props.submitForm(formData);
+  };
+
   return (
     <form>
       <label htmlFor="res-date">Choose date</label>
@@ -57,6 +68,7 @@ const BookingForm = (props) => {
         aria-label="On Click"
         type="submit"
         value="Make Your reservation"
+        onClick={handleSubmit}
       />
     </form>
   );

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useReducer } from "react";
 
 import About from "./About";
@@ -37,6 +37,12 @@ const Main = () => {
     dispatch(value);
   };
 
+  const navigate = useNavigate();
+  function submitForm(formData) {
+    if (submitAPI(formData)) {
+      navigate("/bookingConfirmed");
+    }
+  }
   return (
     <main>
       <Routes>
@@ -58,10 +64,14 @@ const Main = () => {
               availableTimes={state.availableTimes}
               selectedDate={selectedDate}
               handleDateChange={handleDateChange}
+              submitForm={submitForm}
             ></Booking>
           }
         ></Route>
-        <Route path="/bookingConfirmed" element={<ConfirmedBooking />}></Route>
+        <Route
+          path="/bookingConfirmed"
+          element={<ConfirmedBooking></ConfirmedBooking>}
+        ></Route>
       </Routes>
       <hr />
     </main>

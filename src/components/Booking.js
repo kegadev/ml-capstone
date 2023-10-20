@@ -8,6 +8,7 @@ const Booking = (props) => {
         selectedDate={props.selectedDate}
         handleDateChange={props.handleDateChange}
         dispatch={props.dispatch}
+        submitForm={props.submitForm}
       ></BookingForm>
     </div>
   );
