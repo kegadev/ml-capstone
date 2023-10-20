@@ -53,7 +53,11 @@ const BookingForm = (props) => {
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
+      <input
+        aria-label="On Click"
+        type="submit"
+        value="Make Your reservation"
+      />
     </form>
   );
 };
